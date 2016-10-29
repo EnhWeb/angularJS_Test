@@ -858,6 +858,8 @@
     <Content Include="Scripts\i18n\angular-locale_zh.js" />
     <Content Include="Scripts\i18n\angular-locale_zu-za.js" />
     <Content Include="Scripts\i18n\angular-locale_zu.js" />
+    <None Include="Properties\PublishProfiles\webenh - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\webenh - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -865,6 +867,7 @@
     <Content Include="Web.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Default\Index.cshtml" />
+    <Content Include="webenh.chinacloudsites.cn.PublishSettings" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
