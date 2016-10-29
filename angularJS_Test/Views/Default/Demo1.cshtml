@@ -1,0 +1,80 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<style>
+    p{
+        font-weight:bold;
+        background-color:green;
+        padding:2px 10px;
+        color:#f1f1f1;
+    }
+    .body-content div{
+        margin-top:20px;
+    }
+    footer p {
+        background-color:transparent;
+        color:#777777;
+        font-weight:inherit;
+    }
+</style>
+
+
+<h2>Deom1 : 数据自动邦定</h2>
+
+
+<div ng-controller="AppController1">
+    <p>控制器1</p>
+    输入数据邦定：
+    <input type="text" ng-model="value" />
+    <h1>{{value}}</h1>
+</div>
+
+
+<div ng-controller="AppController2">
+    <p>控制器2</p>
+    计算数据邦定：
+    <input type="number" ng-model="value" />
+    <input type="button" value="增加" ng-click="value=value+1" />
+</div>
+
+
+<div ng-controller="AppController3">
+    <p>控制器3</p>
+</div>
+
+
+<div ng-controller="AppController4">
+    <p>控制器4</p>
+</div>
+
+<script src="~/Scripts/angular.js"></script>
+<script>
+
+    //定义一个模块
+    var app = angular.module('appModule', []);
+
+
+    app.controller('AppController1', ['$scope', function ($scope) {
+
+    }]);
+
+
+    app.controller('AppController2', ['$scope', function ($scope) {
+
+    }]);
+
+
+    app.controller('AppController3', ['$scope', function ($scope) {
+
+    }]);
+
+    app.controller('AppController4', ['$scope', function ($scope) {
+
+    }]);
+
+
+
+
+
+</script>

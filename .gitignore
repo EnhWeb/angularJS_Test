@@ -118,7 +118,7 @@ DocProject/Help/Html2
 DocProject/Help/html
 
 # Click-Once directory
-publish/
+#publish/
 
 # Publish Web Output
 *.[Pp]ublish.xml
@@ -129,7 +129,7 @@ publish/
 #*.pubxml
 
 # NuGet Packages Directory
-packages/*
+#packages/*
 ## TODO: If the tool you use requires repositories.config
 ## uncomment the next line
 #!packages/repositories.config
@@ -138,14 +138,14 @@ packages/*
 # NuGet packages use it for MSBuild targets.
 # This line needs to be after the ignore of the build folder
 # (and the packages folder if the line above has been uncommented)
-!packages/build/
+#!packages/build/
 
 # Windows Azure Build Output
 csx/
 *.build.csdef
 
 # Windows Store app package directory
-AppPackages/
+#AppPackages/
 
 # Others
 sql/

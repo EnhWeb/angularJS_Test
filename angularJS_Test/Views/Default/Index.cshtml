@@ -3,59 +3,10 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Deom1 : 数据自动邦定</h2>
+<h2>Demos 演示列表</h2>
 
 <hr />
-<div ng-controller="AppController1">
-    <p>控制器1</p>
-    <input type="text" ng-model="value" />
-    <h1>{{value}}</h1>
-</div>
+<ul>
+    <li>Demo1：<a href="@Url.Action("Demo1","Default")">（当前）进入</a> <a href="@Url.Action("Demo1","Default")" target="_blank">（新窗口）进入</a></li>
+</ul>
 
-<hr />
-<div ng-controller="AppController2">
-    <p>控制器2</p>
-    <input type="number" ng-model="value" />
-    <input type="button" value="增加" ng-click="value=value+1" />
-</div>
-
-<hr />
-<div ng-controller="AppController3">
-    <p>控制器3</p>
-</div>
-
-<hr />
-<div ng-controller="AppController4">
-    <p>控制器4</p>
-</div>
-
-<script src="~/Scripts/angular.js"></script>
-<script>
-
-    //定义一个模块
-    var app = angular.module('appModule', []);
-
-
-    app.controller('AppController1', ['$scope', function ($scope) {
-
-    }]);
-
-
-    app.controller('AppController2', ['$scope', function ($scope) {
-
-    }]);
-
-
-    app.controller('AppController3', ['$scope', function ($scope) {
-
-    }]);
-
-    app.controller('AppController4', ['$scope', function ($scope) {
-
-    }]);
-
-
-
-
-
-</script>
