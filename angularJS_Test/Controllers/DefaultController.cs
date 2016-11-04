@@ -28,5 +28,10 @@ namespace angularJS_Test.Controllers
         {
             return View();
         }
+
+        public ActionResult Demo4()
+        {
+            return View();
+        }
     }
 }
