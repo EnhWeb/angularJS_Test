@@ -2,7 +2,14 @@
     padding-top: 50px;
     padding-bottom: 20px;
 }
-
+a:hover,a:active,a:focus{
+    text-decoration:none !important;
+    border-bottom-width:0px;
+    border-bottom-style:solid;
+}
+a {
+    text-decoration:none;
+}
 * {
     /*禁用选择*/
     moz-user-select: -moz-none;
