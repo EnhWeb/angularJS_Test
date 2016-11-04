@@ -12,26 +12,43 @@
     .button-positive {
         font-weight: bold;
         background-color: #b6ff00;
+        border: 1px solid #e0e0e0;
     }
-    .AppController1 a{
-        cursor:pointer;
+
+    .AppController1 a {
+        cursor: pointer;border-bottom:0px;
+        text-decoration:none;
+        color:#808080;
     }
-    .bar-subheader{
+
+    .bar-subheader {
         /*禁用选择*/
         moz-user-select: -moz-none;
         -moz-user-select: none;
-        -o-user-select:none;
-        -khtml-user-select:none;
-        -webkit-user-select:none;
-        -ms-user-select:none;
-        user-select:none;
+        -o-user-select: none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
     }
-    .has-subheader{
-        border:1px solid #808080;
+
+    .has-subheader {
+        border: 1px solid #e0e0e0;
+        
     }
-    .bar-header .title{
-        text-align:center;
+
+    .bar-header .title {
+        text-align: center;padding-bottom:5px;
     }
+
+    .button-bar {
+        line-height: initial;
+        
+    }
+    .bar-subheader .button-bar .button {
+        display:inline-block;
+        padding:2px 5px;
+    }.button-bar{margin-left:8px;}
 </style>
 
 
@@ -46,14 +63,14 @@
         </div>
         <div class="bar bar-subheader">
             <div class="button-bar">
-                <a class="button" ng-class="tabPageIndex==1?'button-positive':''" ng-click="tabPageIndex=1">button1</a>
-                <a class="button" ng-class="tabPageIndex==2?'button-positive':''" ng-click="tabPageIndex=2">button2</a>
-                <a class="button" ng-class="tabPageIndex==3?'button-positive':''" ng-click="tabPageIndex=3">button3</a>
-                <a class="button" ng-class="tabPageIndex==4?'button-positive':''" ng-click="tabPageIndex=4">button4</a>
-                <a class="button" ng-class="tabPageIndex==5?'button-positive':''" ng-click="tabPageIndex=5">button5</a>
+                <a class="button" ng-class="tabPageIndex==1?'button-positive':''" ng-mouseenter="tabPageIndex=1" ng-click="tabPageIndex=1">button1</a>
+                <a class="button" ng-class="tabPageIndex==2?'button-positive':''" ng-mouseenter="tabPageIndex=2" ng-click="tabPageIndex=2">button2</a>
+                <a class="button" ng-class="tabPageIndex==3?'button-positive':''" ng-mouseenter="tabPageIndex=3" ng-click="tabPageIndex=3">button3</a>
+                <a class="button" ng-class="tabPageIndex==4?'button-positive':''" ng-mouseenter="tabPageIndex=4" ng-click="tabPageIndex=4">button4</a>
+                <a class="button" ng-class="tabPageIndex==5?'button-positive':''" ng-mouseenter="tabPageIndex=5" ng-click="tabPageIndex=5">button5</a>
             </div>
         </div>
-        
+
         <div class="has-subheader">
             <div ng-show="tabPageIndex==1" ng-include="'/content/template/HtmlPage1.html'">加载ING</div>
             <div ng-show="tabPageIndex==2" ng-include="'/content/template/HtmlPage2.html'">这里不管写什么都不会展示,完全被ng-include取代</div>
