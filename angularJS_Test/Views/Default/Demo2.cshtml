@@ -16,6 +16,22 @@
     .AppController1 a{
         cursor:pointer;
     }
+    .bar-subheader{
+        /*禁用选择*/
+        moz-user-select: -moz-none;
+        -moz-user-select: none;
+        -o-user-select:none;
+        -khtml-user-select:none;
+        -webkit-user-select:none;
+        -ms-user-select:none;
+        user-select:none;
+    }
+    .has-subheader{
+        border:1px solid #808080;
+    }
+    .bar-header .title{
+        text-align:center;
+    }
 </style>
 
 
@@ -24,9 +40,9 @@
 
 
 <div ng-controller="AppController1" class="AppController1">
-    <ion-view ng-init="tabPageIndex=1">
+    <div ng-init="tabPageIndex=1">
         <div class="bar bar-header bar-royal">
-            <div class="title">tabPage</div>
+            <div class="title">TabPage ng-include用法分析以及多标签页面的简单实现方式</div>
         </div>
         <div class="bar bar-subheader">
             <div class="button-bar">
@@ -37,7 +53,8 @@
                 <a class="button" ng-class="tabPageIndex==5?'button-positive':''" ng-click="tabPageIndex=5">button5</a>
             </div>
         </div>
-        <ion-content class="has-subheader">
+        
+        <div class="has-subheader">
             <div ng-show="tabPageIndex==1" ng-include="'/content/template/HtmlPage1.html'">加载ING</div>
             <div ng-show="tabPageIndex==2" ng-include="'/content/template/HtmlPage2.html'">这里不管写什么都不会展示,完全被ng-include取代</div>
             <div ng-if="tabPageIndex==3" ng-include="'/content/template/HtmlPage3.html'">加载ING</div>
@@ -49,8 +66,8 @@
                     $scope.tests = json5;
                 }]);
             </script>
-        </ion-content>
-    </ion-view>
+        </div>
+    </div>
 </div>
 
 

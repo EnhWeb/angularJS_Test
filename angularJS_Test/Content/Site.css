@@ -3,10 +3,22 @@
     padding-bottom: 20px;
 }
 
+* {
+    /*禁用选择*/
+    moz-user-select: -moz-none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 /* Set padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+    overflow-wrap: break-word;
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
@@ -15,4 +27,3 @@ select,
 textarea {
     max-width: 280px;
 }
-
