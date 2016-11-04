@@ -6,11 +6,81 @@
 <a href="@Url.Action("Demo2","Default")">
     <h2>Demo2</h2>
 </a>
+<a href="http://www.cnblogs.com/webenh/p/6021591.html">原 ng-include用法分析以及多标签页面的简单实现方式 http://www.cnblogs.com/webenh/p/6021591.html</a>
+<hr />
+<style>
+    .button-positive {
+        font-weight: bold;
+        background-color: #b6ff00;
+    }
+    .AppController1 a{
+        cursor:pointer;
+    }
+</style>
 
 
 
 
 
+
+<div ng-controller="AppController1" class="AppController1">
+    <ion-view ng-init="tabPageIndex=1">
+        <div class="bar bar-header bar-royal">
+            <div class="title">tabPage</div>
+        </div>
+        <div class="bar bar-subheader">
+            <div class="button-bar">
+                <a class="button" ng-class="tabPageIndex==1?'button-positive':''" ng-click="tabPageIndex=1">button1</a>
+                <a class="button" ng-class="tabPageIndex==2?'button-positive':''" ng-click="tabPageIndex=2">button2</a>
+                <a class="button" ng-class="tabPageIndex==3?'button-positive':''" ng-click="tabPageIndex=3">button3</a>
+                <a class="button" ng-class="tabPageIndex==4?'button-positive':''" ng-click="tabPageIndex=4">button4</a>
+                <a class="button" ng-class="tabPageIndex==5?'button-positive':''" ng-click="tabPageIndex=5">button5</a>
+            </div>
+        </div>
+        <ion-content class="has-subheader">
+            <div ng-show="tabPageIndex==1" ng-include="'/content/template/HtmlPage1.html'">加载ING</div>
+            <div ng-show="tabPageIndex==2" ng-include="'/content/template/HtmlPage2.html'">这里不管写什么都不会展示,完全被ng-include取代</div>
+            <div ng-if="tabPageIndex==3" ng-include="'/content/template/HtmlPage3.html'">加载ING</div>
+            <div ng-if="tabPageIndex==4" ng-include="'/content/template/HtmlPage4.html'">加载ING</div>
+            <div ng-show="tabPageIndex==5" ng-include="'/content/template/HtmlPage5.html'">加载ING</div>
+            <script>
+                var json5 = [{ name: 'test1' }, { name: 'test2' }, { name: 'test3' }];
+                app.controller('template5Controller', ['$scope', function ($scope) {
+                    $scope.tests = json5;
+                }]);
+            </script>
+        </ion-content>
+    </ion-view>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*<script src="~/Scripts/angular.js"></script>*@
+<script>
+    app.controller('AppController1', ['$scope', function ($scope) {
+
+    }]);
+</script>
 
 
 
