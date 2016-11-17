@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+    <title></title>
+    <script src="../../Scripts/angular.js"></script>
+</head>
+
+<body ng-controller="myinfoCtrl">
+
+    <div ng-show="on">111</div>
+
+    <script type="text/javascript">
+        var app = angular.module('app', []);
+        app.controller('myinfoCtrl', ['$scope', function ($scope) {
+            $scope.on = true;
+            setTimeout(function () {
+                console.log($scope.on)
+                $scope.on = false;
+
+                //应用 $scope 邦定项的更改到页面中
+                $scope.$apply();
+
+                console.log($scope.on)
+            }, 1000)
+        }]);
+    </script>
+</body>
+
+</html>
